@@ -27,12 +27,12 @@ RUN pip install flask
 RUN apt-get remove -y build-essential
 RUN rm -rf mecab-*
 
-#CMD ["mecab"]
-#CMD ["python"]
-#CMD ["
+# Flask
 RUN git clone https://gist.github.com/29e4c9e852d21d000193.git
 RUN mv 29e4c9e852d21d000193/web.py .
 RUN rm -rf 29e4c9e852d21d000193
+
+# Execution
 EXPOSE 5000
 CMD ifconfig | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'; python web.py
 
