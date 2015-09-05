@@ -12,7 +12,8 @@ RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.
 RUN cd mecab-0.996-ko-0.9.2; ./configure; make; make install; ldconfig
 
 # Mecab-Ko-Dic
-RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.0.1-20150707.tar.gz | tar zxfv -
+# RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.0.1-20150707.tar.gz | tar zxfv -
+RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.0.1-20150825.tar.gz | tar zxfv -
 RUN cd mecab-ko-dic-2.0.1-20150707; sh ./autogen.sh
 RUN cd mecab-ko-dic-2.0.1-20150707; ./configure; make; make install; ldconfig
 
