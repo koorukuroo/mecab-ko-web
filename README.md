@@ -4,7 +4,7 @@ Mecab-ko( https://github.com/koorukuroo/mecab-ko )와 Flask를 이용한 형태�
 # Usage
 ## Docker 실행
 ```
-$ sudo docker pull koorukuroo/mecab-ko-web
+$ sudo docker pull koorukuroo/mecab-ko-web:0.1
 $ sudo docker run -i -t koorukuroo/mecab-ko-web:0.1
 172.17.0.43 (Docker Container IP)
 127.0.0.1
