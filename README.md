@@ -35,6 +35,9 @@ https://docs.docker.com/
 7. sudo docker pull koorukuroo/mecab-ko-web
 8. sudo docker run -d koorukuroo/mecab-ko-web
 
+##### For Server
+sudo iptables -t nat -A PREROUTING -p tcp --dport 5000 -j DNAT --to-destination 172.17.0.2:5000
+
 
 # Usage
 ## Docker 실행
