@@ -1,7 +1,7 @@
 # mecab-ko-web
 Mecab-ko( https://github.com/koorukuroo/mecab-ko )와 Flask를 이용한 형태소 분석입니다.
 
-## Docker Installation
+# Docker Installation
 https://docs.docker.com/
 - Windows : https://download.docker.com/win/beta/InstallDocker.msi
 - Mac : https://download.docker.com/mac/beta/Docker.dmg
@@ -23,6 +23,17 @@ https://docs.docker.com/
 - https://forums.docker.com/t/access-host-not-vm-from-inside-container/11747/30
 - https://github.com/docker/docker/issues/19119
 - https://docs.docker.com/docker-for-mac/networking/#/i-can-t-ping-my-containers
+
+### Ubuntu 14.04 LTS 
+##### https://docs.docker.com/engine/installation/linux/ubuntulinux/
+1. sudo apt-get install apt-transport-https ca-certificates
+2. sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+3. sudo bash -c 'echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /etc/apt/sources.list.d/docker.list'
+4. sudo apt-get update
+5. sudo apt-get install linux-image-extra-$(uname -r)
+6. sudo apt-get install docker-engine -y
+7. sudo docker pull koorukuroo/mecab-ko-web
+8. sudo docker run -d koorukuroo/mecab-ko-web
 
 
 # Usage
