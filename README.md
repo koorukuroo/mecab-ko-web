@@ -46,7 +46,8 @@ EOS
 
 # Docker
 도커 정보
-https://registry.hub.docker.com/u/koorukuroo/mecab-ko-web
+https://hub.docker.com/r/koorukuroo/mecab-ko-web/
+
 ### 기본적인 Docker 명령어
 - 컨테이너 목록 출력
  - docker ps -a
