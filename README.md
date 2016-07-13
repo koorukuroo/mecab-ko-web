@@ -39,7 +39,14 @@ https://registry.hub.docker.com/u/koorukuroo/mecab-ko-web
  - docker images
 - 이미지 삭제
  - docker rmi koorukuroo/mecab-ko-web
+- 컨테이너 접속
+ - docker attach <CONTAINER ID>
+ 
 - Dockerfile 빌드
  - docker build -t koorukuroo/mecab-ko-web .
-- 빌드된 Dockerfile 실행
- - docker run -d koorukuroo/mecab-ko-web
+- 빌드된 Dockerfile 백그라운드에서 실행
+ - docker run -d -t koorukuroo/mecab-ko-web
+- 빌드된 Dockerfile 인터렉티브 모드에서 실행
+ - docker run -i -t koorukuroo/mecab-ko-web
+- 빌드된 Dockerfile bash로 진입
+ - docker run -i -t koorukuroo/mecab-ko-web /bin/bash
