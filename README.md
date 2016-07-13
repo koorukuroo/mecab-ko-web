@@ -5,6 +5,9 @@ Mecab-ko( https://github.com/koorukuroo/mecab-ko )와 Flask를 이용한 형태�
 https://docs.docker.com/
 - Windows : https://download.docker.com/win/beta/InstallDocker.msi
 - Mac : https://download.docker.com/mac/beta/Docker.dmg
+### Mac
+
+
 
 # Usage
 ## Docker 실행
@@ -37,11 +40,16 @@ https://registry.hub.docker.com/u/koorukuroo/mecab-ko-web
  - docker kill <CONTAINER ID>
 - 이미지 목록 출력
  - docker images
+- 컨테이너 삭제
+ - docker rm <CONTAINER ID>
+- 존재하는 컨테이너 전체 삭제
+ - docker rm $(docker ps -a -q)
 - 이미지 삭제
  - docker rmi koorukuroo/mecab-ko-web
+- 존재하는 이미지 전체 삭제
+ - docker rmi $(docker images -q)
 - 컨테이너 접속
  - docker attach <CONTAINER ID>
- 
 - Dockerfile 빌드
  - docker build -t koorukuroo/mecab-ko-web .
 - 빌드된 Dockerfile 백그라운드에서 실행
@@ -50,3 +58,5 @@ https://registry.hub.docker.com/u/koorukuroo/mecab-ko-web
  - docker run -i -t koorukuroo/mecab-ko-web
 - 빌드된 Dockerfile bash로 진입
  - docker run -i -t koorukuroo/mecab-ko-web /bin/bash
+- 네트워크 환경 체크
+ - docker network inspect bridge
