@@ -5,6 +5,7 @@ Mecab-ko( https://github.com/koorukuroo/mecab-ko )와 Flask를 이용한 형태�
 https://docs.docker.com/
 - Windows : https://download.docker.com/win/beta/InstallDocker.msi
 - Mac : https://download.docker.com/mac/beta/Docker.dmg
+
 ### Mac
 1. brew cask install virtualbox --appdir=/Applications
 2. docker-machine create --driver virtualbox default
@@ -16,6 +17,7 @@ https://docs.docker.com/
 8. docker run -d koorukuroo/mecab-ko-web
 9. exit
 10. curl 172.17.0.2:5000/?text=테스트
+
 ##### References
 - https://gist.github.com/makuk66/8380c901a9a620df7023
 - https://forums.docker.com/t/access-host-not-vm-from-inside-container/11747/30
