@@ -1,6 +1,12 @@
 # mecab-ko-web
 Mecab-ko( https://github.com/koorukuroo/mecab-ko )와 Flask를 이용한 형태소 분석입니다.
 
+# Docker
+##Installation
+https://docs.docker.com/
+- Windows : https://download.docker.com/win/beta/InstallDocker.msi
+- Mac : https://download.docker.com/mac/beta/Docker.dmg
+
 # Usage
 ## Docker 실행
 ```
