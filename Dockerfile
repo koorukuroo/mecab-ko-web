@@ -1,5 +1,9 @@
-FROM ubuntu:14.04
-MAINTAINER Kyunghoon <kyunghoon@unist.ac.kr>
+FROM ubuntu:16.04
+LABEL maintainer Kyunghoon <kyunghoon@unist.ac.kr>
+
+# Mirror Change to daumkakao
+RUN cp /etc/apt/sources.list /etc/apt/sources.list.org
+RUN sed -e 's/\(us.\)\?archive.ubuntu.com/ftp.daumkakao.com/g' -e 's/security.ubuntu.com/ftp.daumkakao.com/g' < /etc/apt/sources.list.org > /etc/apt/sources.list
 
 # Essentials
 RUN apt-get update
@@ -13,9 +17,10 @@ RUN cd mecab-0.996-ko-0.9.2; ./configure; make; make install; ldconfig
 
 # Mecab-Ko-Dic
 # RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.0.1-20150920.tar.gz | tar zxfv -
-RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.0.3-20170922.tar.gz | tar zxfv -
-RUN cd mecab-ko-dic-2.0.1-20150920; sh ./autogen.sh
-RUN cd mecab-ko-dic-2.0.1-20150920; ./configure; make; make install; ldconfig
+# RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.0.3-20170922.tar.gz | tar zxfv -
+RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.1.0-20180716.tar.gz | tar zxfv -
+RUN cd mecab-ko-dic-2.1.0-20180716; sh ./autogen.sh
+RUN cd mecab-ko-dic-2.1.0-20180716; ./configure; make; make install; ldconfig
 
 # Mecab-Python
 RUN git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
