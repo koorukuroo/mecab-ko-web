@@ -18,9 +18,12 @@ RUN cd mecab-0.996-ko-0.9.2; ./configure; make; make install; ldconfig
 # Mecab-Ko-Dic
 # RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.0.1-20150920.tar.gz | tar zxfv -
 # RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.0.3-20170922.tar.gz | tar zxfv -
-RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.1.0-20180716.tar.gz | tar zxfv -
-RUN cd mecab-ko-dic-2.1.0-20180716; sh ./autogen.sh
-RUN cd mecab-ko-dic-2.1.0-20180716; ./configure; make; make install; ldconfig
+# RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.1.0-20180716.tar.gz | tar zxfv -
+RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.1.1-20180720.tar.gz | tar zxfv -
+# RUN cd mecab-ko-dic-2.1.0-20180716; sh ./autogen.sh
+RUN cd mecab-ko-dic-2.1.1-20180720; sh ./autogen.sh
+# RUN cd mecab-ko-dic-2.1.0-20180716; ./configure; make; make install; ldconfig
+RUN cd mecab-ko-dic-2.1.1-20180720; ./configure; make; make install; ldconfig
 
 # Mecab-Python
 RUN git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
